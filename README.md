@@ -42,6 +42,12 @@ To run the client, cd into the `client` folder and run:
 npm install && npm start
 ```
 
+Exposed ports:
+```bash
+GUI: :4200
+BE:  :8080
+```
+
 ## Development
 
 To build the application and start a web server (auto update during development)
