@@ -4,6 +4,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {CarService} from '../shared/car/car.service';
 import {GiphyService} from '../shared/giphy/giphy.service';
 import {NgForm} from '@angular/forms';
+import {Car} from "../model/car";
 
 @Component({
   selector: 'app-car-edit',
@@ -11,7 +12,7 @@ import {NgForm} from '@angular/forms';
   styleUrls: ['./car-edit.component.css']
 })
 export class CarEditComponent implements OnInit, OnDestroy {
-  car: any = {};
+  car: Car = {};
 
   sub: Subscription;
 

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {GiphyService} from '../shared/giphy/giphy.service';
 import {CarService} from '../shared/car/car.service';
+import {Car} from "../model/car";
 
 @Component({
   selector: 'app-car-list',
@@ -8,7 +9,7 @@ import {CarService} from '../shared/car/car.service';
   styleUrls: ['./car-list.component.css']
 })
 export class CarListComponent implements OnInit {
-  cars: Array<any>;
+  cars: Array<Car>;
 
   constructor(private carService: CarService, private giphyService: GiphyService) {
   }
