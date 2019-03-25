@@ -44,17 +44,18 @@ export class CarEditComponent implements OnInit, OnDestroy {
   }
 
   gotoList() {
+    // noinspection JSIgnoredPromiseFromCall
     this.router.navigate(['/car-list']);
   }
 
   save(form: NgForm) {
-    this.carService.save(form).subscribe(result => {
+    this.carService.save(form).subscribe(() => {
       this.gotoList();
     }, error => console.error(error));
   }
 
   remove(href) {
-    this.carService.remove(href).subscribe(result => {
+    this.carService.remove(href).subscribe(() => {
       this.gotoList();
     }, error => console.error(error));
   }
